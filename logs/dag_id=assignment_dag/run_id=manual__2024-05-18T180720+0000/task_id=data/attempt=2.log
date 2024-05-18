@@ -1,0 +1,26 @@
+[2024-05-18T18:31:57.620+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: assignment_dag.data manual__2024-05-18T18:07:20+00:00 [queued]>
+[2024-05-18T18:32:01.256+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: assignment_dag.data manual__2024-05-18T18:07:20+00:00 [queued]>
+[2024-05-18T18:32:01.259+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-05-18T18:32:01.269+0000] {taskinstance.py:1363} INFO - Starting attempt 2 of 2
+[2024-05-18T18:32:01.282+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-05-18T18:32:03.352+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): data> on 2024-05-18 18:07:20+00:00
+[2024-05-18T18:32:03.523+0000] {standard_task_runner.py:55} INFO - Started process 6387 to run task
+[2024-05-18T18:32:03.810+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'assignment_dag', 'data', 'manual__2024-05-18T18:07:20+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/assignment_dag.py', '--cfg-path', '/tmp/tmp2hulyiw3']
+[2024-05-18T18:32:03.817+0000] {standard_task_runner.py:83} INFO - Job 9: Subtask data
+[2024-05-18T18:32:09.952+0000] {task_command.py:376} INFO - Running <TaskInstance: assignment_dag.data manual__2024-05-18T18:07:20+00:00 [running]> on host ec7a58f0c94e
+[2024-05-18T18:32:24.599+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=i200704@nu.edu.pk
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=assignment_dag
+AIRFLOW_CTX_TASK_ID=data
+AIRFLOW_CTX_EXECUTION_DATE=2024-05-18T18:07:20+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-05-18T18:07:20+00:00
+[2024-05-18T18:33:45.643+0000] {assignment_dag.py:61} ERROR - Error fetching data from https://www.dawn.com/: ('Connection aborted.', OSError(0, 'Error'))
+[2024-05-18T18:34:02.292+0000] {assignment_dag.py:63} ERROR - An error occurred: Couldn't find a tree builder with the features you requested: html.parser. Do you need to install a parser library?
+[2024-05-18T18:34:02.316+0000] {python.py:177} INFO - Done. Returned value was: []
+[2024-05-18T18:34:03.695+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=assignment_dag, task_id=data, execution_date=20240518T180720, start_date=20240518T183200, end_date=20240518T183403
+[2024-05-18T18:34:04.550+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2024-05-18T18:34:07.151+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
